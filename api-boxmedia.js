@@ -18,7 +18,6 @@ _wq.push({ id: "_all", onReady: function(video) {
 
     const urlParams = new URLSearchParams(queryString);
 
-    
     if(urlParams.has('fn')){
       forename = urlParams.get('fn');
       forename = atob(forename);
@@ -46,12 +45,6 @@ _wq.push({ id: "_all", onReady: function(video) {
 
 
     video.email(forename + ' ' + surname + ' ' + company);
-
-    console.log(forename);
-    console.log(surname);
-    console.log(company);
-    console.log(userId);
-    console.log(pageUrl);
 
     videoName = video.data.media.name
     videoId = video.data.media.hashedId;
