@@ -1,6 +1,6 @@
 (function() { 
 
-const AJAX_POST_URL = "http://staging-boxmediaapi-co-uk.stackstaging.com/wp-json/boxmediaapi/v1";
+const AJAX_POST_URL = "https://boxmedia.online/wp-json/boxmediaapi/v1";
 
 window._wq = window._wq || [];
 _wq.push({ id: "_all", onReady: function(video) {
