@@ -56,6 +56,10 @@ _wq.push({ id: "_all", onReady: function(video) {
     videoName = video.data.media.name
     videoId = video.data.media.hashedId;
 
+    console.log(videoName);
+    console.log(videoId);
+
+
     jQuery.ajax({
         url : AJAX_POST_URL + '/video/1' ,
         type: "GET",
