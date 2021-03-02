@@ -7,12 +7,12 @@ _wq.push({ id: "_all", onReady: function(video) {
 
   video.bind("play", function() {
 
-    let = videoId = '';
+    let videoId = '';
     let forename =''; 
     let surname =''; 
-    let = company ='';
-    let = userId = '';
-    let = pageUrl = '';
+    let company ='';
+    let userId = '';
+    let pageUrl = '';
     
     const queryString = window.location.search;
 
@@ -45,6 +45,13 @@ _wq.push({ id: "_all", onReady: function(video) {
 
 
     video.email(forename + ' ' + surname + ' ' + company);
+
+    
+    console.log(forename);
+    console.log(surname);
+    console.log(company);
+    console.log(userId);
+    console.log(pageUrl);
 
     videoName = video.data.media.name
     videoId = video.data.media.hashedId;
