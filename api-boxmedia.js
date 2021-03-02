@@ -8,6 +8,7 @@ _wq.push({ id: "_all", onReady: function(video) {
   video.bind("play", function() {
 
     let videoId = '';
+    let videoName = '';
     let forename =''; 
     let surname =''; 
     let company ='';
@@ -46,16 +47,14 @@ _wq.push({ id: "_all", onReady: function(video) {
 
     video.email(forename + ' ' + surname + ' ' + company);
 
-    
+    videoName = video.data.media.name
+    videoId = video.data.media.hashedId;
+
     console.log(forename);
     console.log(surname);
     console.log(company);
     console.log(userId);
     console.log(pageUrl);
-
-    videoName = video.data.media.name
-    videoId = video.data.media.hashedId;
-
     console.log(videoName);
     console.log(videoId);
 
