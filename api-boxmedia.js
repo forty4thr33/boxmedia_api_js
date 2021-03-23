@@ -14,6 +14,7 @@ _wq.push({ id: "_all", onReady: function(video) {
     let company ='';
     let userId = '';
     let pageUrl = '';
+    let emailCampaign = '';
     
     const queryString = window.location.search;
 
@@ -44,20 +45,16 @@ _wq.push({ id: "_all", onReady: function(video) {
       pageUrl = atob(pageUrl);
     }
 
+    if(urlParams.has('ec')){
+      emailCampaign = urlParams.get('ec');
+      emailCampaign = atob(emailCampaign);
+    }
+
 
     video.email(forename + ' ' + surname + ' ' + company);
 
     videoName = video.data.media.name
     videoId = video.data.media.hashedId;
-
-    console.log(forename);
-    console.log(surname);
-    console.log(company);
-    console.log(userId);
-    console.log(pageUrl);
-    console.log(videoName);
-    console.log(videoId);
-
 
     jQuery.ajax({
         url : AJAX_POST_URL + '/video/1' ,
@@ -68,7 +65,8 @@ _wq.push({ id: "_all", onReady: function(video) {
                 surname: surname,
                 company: company,
                 userId: userId,  
-                pageUrl: pageUrl
+                pageUrl: pageUrl,
+                emailCampagin: emailCampaign
               },
         success: function(data)
         {
