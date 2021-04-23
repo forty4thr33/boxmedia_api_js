@@ -5,7 +5,7 @@ const AJAX_POST_URL = "https://boxmedia.online/wp-json/boxmediaapi/v1";
 window._wq = window._wq || [];
 _wq.push({ id: "_all", onReady: function(video) {
 
-  video.bind("play", function(){
+  video.bind("play", function() {
 
     let videoId = '';
     let videoName = '';
