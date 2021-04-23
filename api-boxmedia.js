@@ -9,8 +9,8 @@ _wq.push({ id: "_all", onReady: function(video) {
 
     let videoId = '';
     let videoName = '';
-    let forename =''; 
-    let surname =''; 
+    let forename =""; 
+    let surname =""; 
     let company ='';
     let userId = '';
     let pageUrl = '';
@@ -50,9 +50,9 @@ _wq.push({ id: "_all", onReady: function(video) {
       emailCampaign = atob(emailCampaign);
     }
 
-
-    video.email(forename + ' ' + surname + ' ' + company);
-
+    if( forename != "" || surname !="" ){
+      video.email(forename + ' ' + surname + ' ' + company);
+    }
     videoName = video.data.media.name
     videoId = video.data.media.hashedId;
 
