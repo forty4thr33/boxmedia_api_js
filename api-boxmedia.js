@@ -22,31 +22,37 @@ _wq.push({ id: "_all", onReady: function(video) {
 
     if(urlParams.has('fn')){
       forename = urlParams.get('fn');
+      forename = forename.replace(/%3D/g, "");
       forename = atob(forename);
     }
 
     if(urlParams.has('sn')){
       surname = urlParams.get('sn');
+      surname = surname.replace(/%3D/g, "");
       surname = atob(surname);
     }
 
     if(urlParams.has('co')){
       company = urlParams.get('co');
+      company = company.replace(/%3D/g, "");
       company = atob(company);
     }
 
     if(urlParams.has('uid')){
       userId = urlParams.get('uid');
+      userId = userId.replace(/%3D/g, "");
       userId = atob(userId);
     }
 
     if(urlParams.has('dbc')){
       pageUrl = urlParams.get('dbc');
+      pageUrl = pageUrl.replace(/%3D/g, "");
       pageUrl = atob(pageUrl);
     }
 
     if(urlParams.has('ec')){
       emailCampaign = urlParams.get('ec');
+      emailCampaign = emailCampaign.replace(/%3D/g, "");
       emailCampaign = atob(emailCampaign);
     }
 
