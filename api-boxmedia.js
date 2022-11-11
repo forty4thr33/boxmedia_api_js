@@ -12,6 +12,7 @@ _wq.push({ id: "_all", onReady: function(video) {
     let forename =""; 
     let surname =""; 
     let company ='';
+    let useremail = '';
     let userId = '';
     let pageUrl = '';
     let emailCampaign = '';
@@ -36,6 +37,12 @@ _wq.push({ id: "_all", onReady: function(video) {
       company = urlParams.get('co');
       company = company.replace(/%3D/g, "");
       company = atob(company);
+    }
+    
+    if(urlParams.has('em')){
+      useremail = urlParams.get('em');
+      useremail = useremail.replace(/%3D/g, "");
+      useremail = atob(useremail);
     }
 
     if(urlParams.has('uid')){
@@ -70,6 +77,7 @@ _wq.push({ id: "_all", onReady: function(video) {
                 forename: forename,
                 surname: surname,
                 company: company,
+                email: useremail,
                 userId: userId,  
                 pageUrl: pageUrl,
                 emailCampagin: emailCampaign
